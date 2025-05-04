@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve your Flask app
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/home/nyarl/iplogger
+Environment="PATH=/home/nyarl/iplogger/venv/bin"
+ExecStart=/home/nyarl/iplogger/venv/bin/gunicorn --config gunicorn_config.py app:app
+
+[Install]
+WantedBy=multi-user.target
