@@ -1,0 +1,4 @@
+telegram:
+  bot_token: "abc:xyz"
+  chat_id: "123456789"
+redirect_url: "https://youtube.com/watch?v=dQw4w9WgXcQ"
